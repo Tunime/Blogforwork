@@ -1,0 +1,407 @@
+@import "normalize";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,700italic,300italic);
+//importante para  l colocacion de las fuentes
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?dzslvv');
+    src: url('../fonts/icomoon.eot?dzslvv#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?dzslvv') format('truetype'),
+    url('../fonts/icomoon.woff?dzslvv') format('woff'),
+    url('../fonts/icomoon.svg?dzslvv#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+//sin esta parte de ariba esto no resultaria
+body {
+  background: #ffffff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li,ul,div {
+  padding: 0;
+  margin: 0;
+}
+
+.icon-user:before {
+    content: "\e90";
+}
+.icon-sound:before {
+    content: "\e901";
+}
+.icon-cup:before {
+    content: "\e902";
+}
+.icon-world:before {
+    content: "\e903";
+}
+.icon-arrow-right2:before {
+    content: "\e900";
+}
+.icon-facebook:before {
+    content: "\e904";
+}
+.icon-twitter:before {
+    content: "\e905";
+}
+.icon-behance:before {
+    content: "\e906";
+}
+.icon-tumblr:before {
+    content: "\e907";
+}
+.icon-linkedin:before {
+    content: "\e908";
+}
+
+
+//-----------------------------
+.o-titledis {
+  margin: 0;
+  padding: 0;
+  //width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.o-titledid {
+  //padding: 0 0;
+  width: 100%;
+
+}
+
+.o-title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 0 4em 0;
+
+  .u-title__title {
+    font-size: 2em;
+    color: #00DF99;
+    font-weight: bold;
+  }
+}
+.o-title__diamond {
+  display: flex;
+  justify-content: center;
+}
+.u-title__diamondone {
+  width: 10px;
+  height: 10px;
+  background: #00DF99;
+  margin: 0 0.5em 0 0;
+  transform: rotate(45deg);
+}
+
+
+
+.o-stats {
+  //width: 90%;
+  display: flex;
+  justify-content: center;
+  align-content:stretch;
+}
+@media screen and (max-width: 775px) {
+  .o-stats {
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    transition: all 2s ease;
+  }
+  .o-stats__contenedor {
+    margin: 0 0 2em 0;
+  }
+}
+
+.icon_desing {
+  list-style: none;
+  background: #F6F6F6;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:before {
+    color: #00E099;
+    font-size: 3.3em;
+  }
+}
+.o-stats__contenedor {
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  .icon_numer {
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0.2em 0 0 0;
+  }
+  .icon_title {
+    font-size: 1.3em;
+    margin: 0;
+  }
+
+}
+//--------------------------
+.o-blog {
+  padding: 0 0;
+  margin: 0;
+}
+.o-blog__list {
+  background: url("../img/fonBlog.png") no-repeat;
+  height: 1000px;
+  background-size:  cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  li {
+      list-style: none;
+  }
+}
+.o-blog__cont
+{
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  flex: 1;
+  padding:  1em 3em;
+}
+.u-text {
+  display: flex;
+  flex-direction: column;
+  flex: 8;
+  .u-text__title {
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+  }
+  .u-text__date {
+    font-size: 1em;
+    color: white;
+    font-weight: 100;
+  }
+}
+.u-flecha {
+  border: 1.5px solid white;
+  margin: 0 2em 0 0;
+  width: 80px;
+  flex: 1;
+  height: 30px;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+  &:before {
+    color: #ffffff;
+    font-size: 0.8em;
+    transition: all 0.5s ease;
+  }
+  &:hover{
+    background: white;
+    &:before {
+      color: black;
+      transform: translate(10px, 0px);
+    }
+  }
+}
+//-----------------------------
+.o-subscribe {
+  list-style: none;
+  background: url("../img/fonSus.png") no-repeat;
+  min-height: 100vh;
+  width: auto;
+  background-size:  cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.o-subscribe__cont {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .o-subscribe__title {
+    color: white;
+    font-size: 3em;
+    margin: -0.4em 0 0 0;
+    font-weight: bold;
+  }
+
+}
+.o-campos {
+  width: 95%;
+  padding: 2em 1em 2em 1em;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.u-adver
+{
+  color: #FF3B00;
+  display: none;
+  position: absolute; 
+  font-size: 0.8em;
+  font-weight: normal; 
+  font-family: cursive;
+  //opacity: 0;
+}
+#o-cam
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#formulario
+{
+  display: flex;
+
+}
+.u-campo {
+  border: 1px solid #c1c1c1;
+  background: rgba(255, 255, 255, 0);
+  padding:  0 0.5em;
+  margin: 0 0.5em 0 0.5em;
+  height: 3em;
+  width: 20em;
+  color: white;
+  box-shadow: none;
+}
+.u-enviar {
+  background: #00E099;
+  color: white;
+  height: 3.2em;
+  margin: 0 0 0 1em;
+  width: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .enviar {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.o-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.o-users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.o-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding: 4em 0 3em 0;
+}
+.user
+{
+  width: 11em;
+  margin: 0 0.5em 0 0.5em;
+}
+.o-testimonial {
+  margin: 0;
+  padding: 4em 0 4em 0;
+  display: flex;
+  flex-direction: column;
+}
+.o-testimonial__logos {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;;
+}
+.o-logo {
+  width: 13em;
+  margin: 1em 2em 1em 2em;
+  height: 3.5em;
+}
+
+.o-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 0 2em 0;
+  align-items: center;
+  justify-content: center;
+  li
+  {
+    list-style: none;
+  }
+  .u-footer__menu {
+    font-weight: bold;
+    text-decoration: none;
+    margin: 1em 2em;
+    a{
+      color: black;
+    }
+  }
+}
+.o-footer__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.o-footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.o-icon {
+  margin: 1em 2em;
+  &:before {
+    color: black;
+  }
+}
+
+
+//---------------------------------
+/*.alvaro {
+  //border: grosor color
+  border: 1.5px solid black;
+}*/
+//------------------------------------
